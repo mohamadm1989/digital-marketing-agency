@@ -14,11 +14,19 @@ export default function Icon() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: 'black',
-                    borderRadius: '4px',
+                    background: 'transparent',
                 }}
             >
-                <div style={{ color: '#fce34d', fontSize: 24, fontWeight: 'bold', fontFamily: 'sans-serif' }}>X</div>
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 100 100"
+                    fill="none"
+                >
+                    <path d="M50 5L90 28L50 51L10 28L50 5Z" fill="#1e3f20" opacity="0.9" />
+                    <path d="M10 28L50 51V95L10 72V28Z" fill="#1e3f20" opacity="0.5" />
+                    <path d="M50 51L90 28V72L50 95V51Z" fill="#fce34d" />
+                </svg>
             </div>
         ),
         { ...size }

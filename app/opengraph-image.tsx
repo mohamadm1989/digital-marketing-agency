@@ -20,23 +20,16 @@ export default async function Image() {
                 }}
             >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                    <div
-                        style={{
-                            width: '80px',
-                            height: '80px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            background: '#fce34d',
-                            borderRadius: '12px',
-                            color: 'black',
-                            fontSize: '50px',
-                            fontWeight: 'bold',
-                            fontFamily: 'sans-serif'
-                        }}
+                    <svg
+                        width="100"
+                        height="100"
+                        viewBox="0 0 100 100"
+                        fill="none"
                     >
-                        X
-                    </div>
+                        <path d="M50 5L90 28L50 51L10 28L50 5Z" fill="white" opacity="0.9" />
+                        <path d="M10 28L50 51V95L10 72V28Z" fill="white" opacity="0.5" />
+                        <path d="M50 51L90 28V72L50 95V51Z" fill="#fce34d" />
+                    </svg>
                     <div style={{ fontSize: '70px', fontWeight: 'bold', color: 'white', fontFamily: 'sans-serif' }}>
                         Legacy Solutions
                     </div>
