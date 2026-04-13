@@ -6,6 +6,7 @@
   --color-accent: #bdf126;
   --color-bg-light: #f8f9fa;
   --font-sans: var(--font-primary), ui-sans-serif, system-ui, sans-serif;
+  --font-cairo: var(--font-cairo);
 }
 
 @layer base {
@@ -13,9 +14,12 @@
     --font-primary: var(--font-space-grotesk);
   }
 
-  html[lang="ar"],
-  html[dir="rtl"] {
+  /* Apply Cairo font to any Arabic language or RTL directed element */
+  [lang="ar"],
+  [dir="rtl"],
+  .font-cairo {
     --font-primary: var(--font-cairo) !important;
+    font-family: var(--font-cairo), ui-sans-serif, system-ui, sans-serif !important;
   }
 }
 
