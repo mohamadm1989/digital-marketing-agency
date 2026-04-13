@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e3f20;
+  --color-primary-light: #2a592d;
+  --color-accent: #bdf126;
+  --color-bg-light: #f8f9fa;
+  --font-sans: var(--font-primary), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-primary: var(--font-space-grotesk);
+  }
+
+  html[lang="ar"],
+  html[dir="rtl"] {
+    --font-primary: var(--font-cairo) !important;
+  }
+}
+
+@layer utilities {
+  .clip-slant {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@layer base {
+
+  /* Lenis Smooth Scroll CSS */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-accent, #fce34d);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Badge rotation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Premium Shimmer Border Effect */
+@keyframes border-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.shimmer-card-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  /* Default subtle border */
+  padding: 1px;
+  /* Border thickness */
+  transition: background 0.3s ease;
+}
+
+.shimmer-card-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 180deg at 50% 50%,
+      transparent 0deg,
+      transparent 160deg,
+      #fce34d 180deg,
+      transparent 200deg,
+      transparent 360deg);
+  animation: border-rotate 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shimmer-card-wrapper:hover::before {
+  opacity: 1;
+}
+
+/* Face shimmer effect */
+@keyframes shimmer-shine {
+  from {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+
+  to {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+.shimmer-shine-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(252, 227, 77, 0.05),
+      rgba(252, 227, 77, 0.1),
+      rgba(252, 227, 77, 0.05),
+      transparent);
+  transform: translateX(-100%) skewX(-15deg);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.shimmer-card-wrapper:hover .shimmer-shine-layer {
+  animation: shimmer-shine 1.5s ease-in-out;
+}

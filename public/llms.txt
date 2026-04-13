@@ -1,0 +1,17 @@
+# Legacy Solutions
+
+> Premium digital marketing, luxury web design, and SEO strategies with a global footprint in Germany (Herne) and Syria (Aleppo). We build cinematic, high-performance websites that convert visitors into revenue.
+
+## Main sections
+- `Home -> https://legacysolutions-agency.com/`: Overview of our premium services, our guarantee, and our brand promise.
+- `About Us -> https://legacysolutions-agency.com/about`: Our story, our mission, and the expert team bridging European precision with Middle Eastern ingenuity.
+- `Services -> https://legacysolutions-agency.com/services`: Portfolio of offerings including Luxury Web Design, Performance SEO, Brand Identity, and Conversion Rate Optimization.
+- `Contact -> https://legacysolutions-agency.com/contact`: Connect with our Headquarters in Herne, Germany or our Branch in Aleppo, Syria.
+
+## Key facts
+- **Technologies:** We specialize in building lightning-fast, highly interactive applications using Next.js, React, and Tailwind CSS.
+- **Core Expertise:** Web Design, Technical & Local SEO, Branding, and Conversion Rate Optimization (CRO).
+- **Contact Email:** hello@legacysolutions-agency.com
+- **German HQ Address:** Westring 44, 44623 Herne, Germany.
+- **Syrian Branch Address:** Aleppo, Syria (opposite Al-Ma'arri Secondary School).
+- **Brand Identity:** High-end, luxury styling featuring signature black and yellow themes with cinematic scroll animations.
